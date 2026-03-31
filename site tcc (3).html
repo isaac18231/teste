@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestão Digital Funcional</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <header class="site-header" id="siteHeader">
+        <div class="container header-content">
+            <h1 class="brand" aria-label="Gestao Digital Funcional">Gestao Digital Funcional</h1>
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="#hero">Início</a>
+                <a href="#sobre">Serviços</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero section-padding">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h2>Simplicidade no processo, excelência no resultado. Isso é GDF.</h2>
+                    <p>Transforme acessos em oportunidades.</p>
+                    <a href="#contato" class="button-primary">suporte</a>
+                </div>
+                <div class="hero-logo-wrap">
+                    <img src="logo_tcc-removebg-preview.png" alt="Profissionais trabalhando" class="hero-logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="services section-padding">
+            <div class="container">
+                <h3 class="section-title">O que oferecemos</h3>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="Design" class="service-icon">
+                        <h4>Desenvolvimento Web Sob Medida</h4>
+                        <p>Sites Institucionais: Criação de uma "vitrine digital" profissional para passar credibilidade.
+.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="SEO" class="service-icon">
+                        <h4>Performance e Experiência do Usuário (UX/UI)</h4>
+                        <p>Design Responsivo: Garantir que o site funcione perfeitamente em celulares, tablets e computadores.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1250/1250678.png" alt="Manutenção" class="service-icon">
+                        <h4>Presença e Visibilidade (SEO)</h4>
+                        <p>Configurar o site para que ele apareça nas primeiras páginas do Google quando alguém buscar pelo serviço do cliente.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact section-padding">
+            <div class="container contact-container">
+                <h3 class="section-title">Fale com a gente</h3>
+                <div class="contact-card">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-field">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="button-primary">Enviar Mensagem</button>
+                    </form>
+                    <p id="feedback"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Gestão Digital Funcional. todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const header = document.getElementById("siteHeader");
+
+        function updateHeaderState() {
+            if (window.scrollY > 12) {
+                header.classList.add("is-scrolled");
+            } else {
+                header.classList.remove("is-scrolled");
+            }
+        }
+
+        updateHeaderState();
+        window.addEventListener("scroll", updateHeaderState, { passive: true });
+    </script>
+</body>
+</html>
